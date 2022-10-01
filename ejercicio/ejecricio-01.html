@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+     
+        <h5>Ejemplo 01</h5>
+        <div class="mermaid">
+          classDiagram
+		  direction LR
+			class Equipo
+			Equipo : +String nombre
+			Equipo : +Int tipo_deporte
+			Equipo : +String siglas
+			Equipo : +setNombre(name)
+			Equipo : +getNombre()
+			Equipo : +setTipoDeporte(name)
+			Equipo : +getTipoDeporte()
+			Equipo : +setSiglas(name)
+			Equipo : +getSiglas()
+
+			class Jugador
+			Jugador : +String nombre
+			Jugador : +String apellido
+			Jugador : +setNombre(name)
+			Jugador : +getNombre()
+			Jugador : +setApellido(lastname)
+			Jugador : +getApellido()
+			
+			class Sancion
+			Sancion : +String observacion
+			Sancion : +Decimal multa
+			Sancion : +setObservacion(obs)
+			Sancion : +getObservacion()
+			Sancion : +setMulta(mult)
+			Sancion : +getMulta()
+			
+			Equipo "1" --> "0..*" Jugador
+			Jugador "1" --> "0..*" Sancion
+
+        </div>
+    </body>
+</html>
